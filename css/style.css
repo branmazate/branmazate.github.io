@@ -15,7 +15,11 @@ body {
     font-family: "Roboto",sans-serif;
     font-size: 16px;
     line-height: 1.55;
-    background-color: #132d46;
+    background-color: #1a4062;
+}
+
+section {
+    display:block
 }
 
 div {
@@ -24,6 +28,17 @@ div {
 
 h1 {
     font-family: "Roboto",Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 0px;
+    color: #fff;
+    margin-bottom: 24px;
+    display: block;
+}
+
+h2 {
+    font-family: "Roboto",Arial, Helvetica, sans-serif;
+    font-size: 34px;
     font-weight: 700;
     line-height: 1.2;
     margin-top: 0px;
@@ -49,6 +64,7 @@ p {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     margin: 0 0 24px;
+    color: #fff;
 }
 
 ul {
@@ -65,9 +81,37 @@ li {
     text-align: -webkit-match-parent;
 }
 
+p.social a{
+    margin: 0 10px 10px 0;
+    color: #fff;
+    background-color: #fff;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    line-height: 40px;
+    font-size: 15px;
+    text-align: center;
+    vertical-align: bottom;
+    border: solid 1px #fff;
+    transition: all 0.2s ease-out;
+}
+
+
 #sidebar {
     padding-top: 40px;
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top:0;
+    left: 0;
+    overflow-x: hidden;
+}
 
+#about-section{
+    margin-left: 200px;
+    background-color: #191e29;
 }
 
 .container-fluid {
@@ -123,3 +167,42 @@ li {
 .sidebar-menu li a{
     color: #fff;
 }
+
+.sidebar-menu li a:hover{
+    font-size: 22px;
+    color: #01c38d;
+}
+
+.content-column.black-blackground{
+    min-height: 100vh;
+    background-color: #fff;
+}
+.col-1{
+    float: left;
+}
+.row{
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.row::before{
+    display:table;
+    content: " "
+}
+
+.row::after{
+    clear: both;
+}
+
+.col-2 .col-3{
+    position:relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.content-column-content{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
