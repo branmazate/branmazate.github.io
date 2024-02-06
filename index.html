@@ -6,7 +6,7 @@
         <title> Brandon Mazate | Data Scientist</title>
         <meta name="robots" content="all,follow">
         <meta name="googlebot" content="index,follow,snippet,archive">
-        <link rel="stylesheet" href="css/style2.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <div id="container">
@@ -25,9 +25,9 @@
                     <!--navigation-->
                     <nav id="sidebar-nav">
                     <ul class="nav-list">
-                        <li><button class="nav-link" onclick="openContent(event,about-me)">About me</button></li>
-                        <li><button class="nav-link" onclick="openContent(event,portfolio)">Portfolio</button></li>
-                        <li><button class="nav-link" onclick="openContent(event,portfolio)">Get in touch</button></li>
+                        <li><a class="nav-link" href="#about-me">About me</a></li>
+                        <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                        <li><a class="nav-link" href="#contact">Get in touch</a></li>
                     </ul>
                     </nav>
                     <!--social panel-->
@@ -38,15 +38,16 @@
                     </p>
                     <!---sidebar contact-->
                     <div class="sidebar-contact">
-                        <a><ion-icon name="mail-outline"></ion-icon></a>
-                        <a><ion-icon name="clipboard-outline"></ion-icon></a>
-                        <p class="mail-text">branmazama@gmail.com</p>
+                        <a href="#"><ion-icon name="mail-outline"></ion-icon></a>
+                        <a href="#"><ion-icon name="clipboard-outline"></ion-icon></a>
+                        <p class="contact-text">branmazama@gmail.com</p>
                     </div>
                 </div>
             </div>
             <!--web content-->
             <div id ="content">
                 <div class="sections">
+                    <!--about-me-->
                     <div id="about-me">
                         <h1 class="section-title">About me</h1>
                         <div class="panel-container">
@@ -57,13 +58,14 @@
                             </div>
                         </div>
                     </div>
+                    <!--portfolio-->
                     <div id="portfolio">
                         <h1 class="section-title">Portfolio</h1>
                         <div class="panel-container">
                             <div class="panel">
-                                <h2>Panel 1</h2>
+                                <h2>Ten Year CHD Risk Prediction Algorithm</h2>
                                 <image></image>
-                                <p>Project description</p>
+                                <p> Model to predict the 10-year risk of Coronary Heart Disease (CHD) in patients</p>
                             </div>
                             <div class="panel">
                                 <h2>Panel 2</h2>
@@ -82,6 +84,7 @@
                             </div>
                         </div>
                     </div>
+                    <!--contact-->
                     <div id="contact">
                         <h1 class="section-title">Get in touch</h1>
                         <div class="panel-container">
