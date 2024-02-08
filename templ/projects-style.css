@@ -131,11 +131,12 @@ p.social a:hover{
 #sidebar-nav ul{
     padding: 0;
     border: 0;
-    float: center;
+    overflow: hidden;
 }
 
 .nav-link {
-    font-size: 16px;
+    margin: 0;
+    font-size: 20px;
     text-align: center;
     color: #fff;
     display: block;
@@ -144,9 +145,8 @@ p.social a:hover{
 
 .nav-link:hover {
     background-size: 100px;
-    font-size: 22px;
     background-color: #c28b7c;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 .nav-link.active {
