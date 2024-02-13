@@ -89,7 +89,14 @@
                         <h1 class="section-title">Get in touch</h1>
                         <div class="panel-container">
                             <div class="unique-panel">
-                                <div id="email-container">email-box</div>
+                                <div id="email-container">
+                                    <form id="form" class="topBefore">
+                                        <input id="name" type="text" placeholder="Name">
+                                        <input id="e-mail" type="text" placeholder="E-mail">
+                                        <textarea id="message" type="text" placeholder="Message"></textarea>
+                                        <input id="submint" type="submit" value="Send">
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -98,5 +105,6 @@
         </div>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="javascript/mail.js"></script>
     </body>    
 </html>
