@@ -1,41 +1,190 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
-/*
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    font-family: "Archivo",sans-serif;
 }
 
 html {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-text-size-adjust: 100%;
-    height: 100%;
-    scroll-behavior: smooth;
 }
 
 body {
-    font-family: "Archivo";
     font-size: 16px;
     background-color: #E8E8E8;
     color: #0e1a27;
-    padding: 0px;
-    border: none;
-    height: 100%;
-    margin: 0px;
+    min-height: 100vh;
+}
+
+#container{
     min-height: 100%;
+    min-width: 100%;
 }
 
-h1 {
-    font-family: "Archivo", sans-serif;
-    font-weight: 700;
-    font-size: 32px;
-    margin-top: 24px;
-    margin-bottom:16px;
-    color: #0E1A27;
+.flex{
+    display: flex;
+    align-items: center;
 }
 
+.menu-icon{
+    display: flex;
+    min-width: 55px;
+    justify-content: center;
+}
+
+.menu-icon i{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sidebar{
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 270px;
+    background: #fff;
+    padding: 15px 10px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+.sidebar.close{
+    width: calc(55px+20px);
+}
+
+.sidebar.close .logo-name,
+.sidebar.close #lock-icon,
+.sidebar.close #sidebar-close{
+    opacity: 0;
+    pointer-events: none;
+}
+
+#lock-icon,
+#sidebar-close{
+    padding:10px;
+    color:#bdbdbd;
+    font-size:25px;
+    cursor:pointer;
+    margin-left: -4px;
+    transition: all 0.3s ease;
+}
+
+#sidebar-close{
+    display: none;
+    color:#bdbdbd;
+    transition: all 0.3s ease-out;
+}
+
+.menu-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 40px;
+    overflow-y: auto;
+    height: calc(100%-82px);
+}
+
+.menu-container::-webkit-scrollbar{
+    display: none;
+}
+
+.menu-title{
+    position:relative;
+    height: 50px;
+
+}
+
+.menu-title .title{
+    margin-left: 15px;
+    transition: all 0.3s ease;
+}
+
+.sidebar.close .title{
+    opacity: 0;
+}
+
+.menu-title .line{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 20px;
+    border-radius: 25px;
+    background: #bdbdbd;
+}
+
+.menu_title .line {
+    opacity: 0;
+}
+.sidebar.close .line {
+    opacity: 1;
+}
+
+.item{
+    list-style: none;
+}
+
+.logo-items{
+    gap:8px;
+}
+
+.logo-name{
+    font-size: 22px;
+    color: #0e1a27;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.link{
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    color: #0e1a27;
+}
+
+.link:hover{
+    color: #f7f7f7;
+    background: linear-gradient(270deg, hsla(204, 71%, 68%, 1) 0%, hsla(217, 53%, 40%, 1) 99%);
+}
+
+.link span{
+    white-space: nowrap;
+}
+
+.link i{
+    height: 50px;
+    min-width: 55px;
+    display: flex;
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 800px){
+    .sidebar {
+        left: 0;
+        z-index: 1000;
+    }
+    .sidebar.close {
+        left: -100%;
+    }
+    #sidebar-close {
+        display: block;
+    }
+    #lock-icon {
+        display: none;
+    }
+}
+/*
 h2 {
     font-weight: lighter;
     line-height: 1,2;
