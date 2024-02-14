@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+/*
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
 }
 
 html {
@@ -14,40 +16,37 @@ html {
 }
 
 body {
-    font-family: "Roboto",sans-serif;
+    font-family: "Archivo";
     font-size: 16px;
-    line-height: 1.55;
-    background-color: #CAD9D6;
-    color: #fff;
+    background-color: #E8E8E8;
+    color: #0e1a27;
+    padding: 0px;
+    border: none;
     height: 100%;
+    margin: 0px;
+    min-height: 100%;
 }
 
 h1 {
-    font-family: "Roboto",Arial, Helvetica, sans-serif;
+    font-family: "Archivo", sans-serif;
     font-weight: 700;
-    line-height: 1.2;
-    margin-top: 0px;
-    color: #fff;
-    margin-bottom: 24px;
-    display: block;
+    font-size: 32px;
+    margin-top: 24px;
+    margin-bottom:16px;
+    color: #0E1A27;
 }
 
 h2 {
     font-weight: lighter;
     line-height: 1,2;
-    margin-top: 20px;
-    color: #fff;
-    display: block;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    color: #0E1A27;
 }
 
 p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    margin: 0 0 24px;
-    color: #fff;
+    margin-bottom: 1rem;
+    color: #0E1A27;
 }
 
 ul {
@@ -142,7 +141,15 @@ p.social a:hover{
 }
 
 #container {
+    height: 100%;
+    width: 100%;
     display: block;
+    margin: none;
+    padding: none;
+    border: none;
+    background-color: #E8E8E8;
+    color: #0e1a27;
+    scroll-behavior: smooth;
 }
 
 #sections{
@@ -151,13 +158,17 @@ p.social a:hover{
 }
 
 #sidebar-section {
-    height: 100%;
-    width: 20%;
-    padding: 40px 10px 10px 0;
+    position: fixed;
+    top:0;
+    left: 0;
+    padding: 40px 32px 40px 32px;
     float: left;
     position: fixed;
     overflow-x: hidden;
-    background-color: #CAD9D6;
+    border-radius: 5px;
+    background-color: #e8e8e8;
+    border: none;
+    margin: none;
 }
 
 .sidebar-content{
@@ -307,8 +318,6 @@ p.social a:hover{
     width: 100%;
 }
 
-/*Get in touch box*/
-
 .email-container{
     width: 100%;
     height: 100vh;
@@ -330,3 +339,5 @@ input:focus::-webkit-input-placeholder,
 input:focus::-webkit-input-placeholder{
     color:#CAD9D6;
 }
+
+*/
