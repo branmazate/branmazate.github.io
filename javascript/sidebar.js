@@ -9,22 +9,23 @@ const sidebarLockBtn = document.querySelector("#lock-icon");
 const toggleLock = () =>{
     sidebar.classList.toggle("locked");
     if (!sidebar.classList.contains("locked")){
-        sidebar.classList.add("hoverable");
+        sidebar.classList.add("unlocked");
         sidebarLockBtn.classList.replace("bx-lock-alt","bx-lock-open-alt");
     } else {
-        sidebar.classList.remove("hoverable");
-        sidebarLockBtn.classList.replace("bx-lock-open-alt","box-lock-alt");
+        sidebar.classList.remove("unlocked");
+        sidebar.classList.add("locked");
+        sidebarLockBtn.classList.replace("bx-lock-open-alt","bx-lock-alt");
     }
 };
 
 const hideSidebar= () => {
-    if(sidebar.classList.contains("hoverable")) {
+    if(sidebar.classList.contains("unlocked")) {
         sidebar.classList.add("close");
     }
 };
 
 const showSidebar= () => {
-    if(sidebar.classList.contains("hoverable")){
+    if(sidebar.classList.contains("unlocked")){
         sidebar.classList.remove("close");
     }
 }
@@ -35,7 +36,7 @@ const toggleSidebar = () => {
 
 if (window.innerWidth<800){
     sidebar.classList.add("close");
-    sidebar.classList.remove("hoverable");
+    sidebar.classList.remove("unlocked");
     sidebar.classList.remove("locked");
 }
 

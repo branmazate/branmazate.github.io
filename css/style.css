@@ -29,7 +29,10 @@ body {
 #description{
     margin-left: 16px;
     margin-top: 8px;
-    color: #aaa;
+    color: #d1d1d1;
+    transition: all 0.1s ease-out;
+    overflow: hidden;
+    text-wrap:nowrap;
 }
 
 .flex{
@@ -41,6 +44,7 @@ body {
     display: flex;
     min-width: 55px;
     justify-content: center;
+    cursor: pointer;
 }
 
 .menu-icon i{
@@ -62,6 +66,10 @@ body {
     transition: all 0.4s ease;
 }
 
+.link-text{
+    transition: all 0.2s ease-out;
+}
+
 .sidebar.close{
     width: 75px;
 }
@@ -73,9 +81,12 @@ body {
     pointer-events: none;
 }
 
+.sidebar.close .link-text{
+    opacity: 0;
+}
+
 .sidebar.close #description{
     opacity: 0;
-    max-height: 1px;
 }
 
 #lock-icon,
@@ -110,12 +121,14 @@ body {
 .menu-title{
     position:relative;
     height: 50px;
-
 }
 
 .menu-title .title{
     margin-left: 15px;
     transition: all 0.3s ease;
+    text-wrap: nowrap;
+    color: #7c7c7c;
+    font-weight: 500;
 }
 
 .sidebar.close .title{
@@ -180,6 +193,30 @@ body {
     border-radius: 4px;
 }
 
+.hide-icon{
+    position: fixed;
+    left: 26px;
+    align-self: center;
+    font-size: 22px;
+    opacity: 0;
+    transition: all 0.2s ease-in;
+}
+
+.sidebar.close .hide-icon{
+    opacity: 100;
+}
+
+.sidebar.close .contact-icons{
+    opacity: 0;
+}
+
+.contact-icons{
+    margin-left: 16px;
+    gap: 20%;
+    align-items: center;
+    justify-content: center;
+}
+
 #sidebar-open{
     display: block;
 }
@@ -192,6 +229,22 @@ body {
     background-color: #f7f7f7;
     border-radius: 20px;
     opacity: 0;
+}
+
+#social-panel{
+    display: block;
+}
+
+.social-icon{
+    border: #525252 solid 1px;
+    border-radius: 20px;
+    backdrop-filter: blur;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.social-icon:hover{
+    fill: white;
 }
 
 @media screen and (max-width: 800px){
