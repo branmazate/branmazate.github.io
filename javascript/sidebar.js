@@ -12,11 +12,13 @@ const toggleLock = () =>{
     if (!sidebar.classList.contains("locked")){
         sidebar.classList.add("unlocked");
         sidebarLockBtn.classList.replace("bx-lock-alt","bx-lock-open-alt");
+        shade.classList.add("blurred");
 
     } else {
         sidebar.classList.remove("unlocked");
         sidebar.classList.add("locked");
         sidebarLockBtn.classList.replace("bx-lock-open-alt","bx-lock-alt");
+        shade.classList.remove("blurred");
     }
 };
 
