@@ -3,7 +3,7 @@ const sidebar = document.querySelector(".sidebar");
 const sidebarOpenBtn = document.querySelector("#sidebar-open");
 const sidebarCloseBtn = document.querySelector("#sidebar-close");
 const sidebarLockBtn = document.querySelector("#lock-icon");
-const content=document.querySelector("#shade")
+const shade=document.querySelector("#shade")
 
 //toogle the lock state of the sidebar
 
@@ -12,6 +12,7 @@ const toggleLock = () =>{
     if (!sidebar.classList.contains("locked")){
         sidebar.classList.add("unlocked");
         sidebarLockBtn.classList.replace("bx-lock-alt","bx-lock-open-alt");
+
     } else {
         sidebar.classList.remove("unlocked");
         sidebar.classList.add("locked");
@@ -22,23 +23,23 @@ const toggleLock = () =>{
 const hideSidebar= () => {
     if(sidebar.classList.contains("unlocked")) {
         sidebar.classList.add("close");
-        content.classList.remove("blurred");
+        shade.classList.remove("blurred");
     }
 };
 
 const showSidebar= () => {
     if(sidebar.classList.contains("unlocked")){
         sidebar.classList.remove("close");
-        content.classList.add("blurred");
+        shade.classList.add("blurred");
     }
 }
 
 const toggleSidebar = () => {
     sidebar.classList.toggle("close");
     if(sidebar.classList.contains("close")){
-        content.classList.remove("blurred");
+        shade.classList.remove("blurred");
     } else {
-        content.classList.add("blurred");
+        shade.classList.add("blurred");
     }
 };
 
