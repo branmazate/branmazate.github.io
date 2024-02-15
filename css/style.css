@@ -236,15 +236,18 @@ body {
 }
 
 .social-icon{
-    border: #525252 solid 1px;
+    background-color: #f8f8f8;
     border-radius: 20px;
     backdrop-filter: blur;
     padding: 8px;
     cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .social-icon:hover{
-    fill: white;
+    background-color: #525252;
+    fill: #f8f8f8;
+    border-radius: 50px;
 }
 
 @media screen and (max-width: 800px){
