@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SL88Y8XX64"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-SL88Y8XX64');
+    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale = 1.0" />
     <title>Brandon Mazate | Data Scientist</title>
@@ -132,11 +141,22 @@
             <!--about-me-->
             <div id="about-me" class="section">
                 <h1 class="section-title">About me</h1>
-                <div class="panel-container">
-                <div class="unique-panel">
+                <div id="about-container" class="panel-container">
+                <div class="panel about-description">
+                    <p>Hello! I'm a <b>medical doctor</b> turned data scientist from Guatemala, where my passion for healthcare meets my enthusiasm for data-driven solutions. My career has evolved from clinical medicine to the forefront of data science, with a special focus on <b>biological data science</b>.</p>
+                    <p>My medical background has been the cornerstone of my journey, providing a strong foundation in research methodologies, biostatistics, and a scientific approach to problem-solving. This experience has been invaluable as I ventured into the world of data science</p>
                     <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-                    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                </div>
+                <div id="profile"><img src="/img/brandon-mazate.jpg" alt="Brandon Mazate" id="profile-pic"></div>
+                <div class="skills">
+                    <ul>
+                    <tag class="skills-tag">Python</tag>
+                    <tag class="skills-tag">Machine learning</tag>
+                    <tag class="skills-tag">Biostatistics</tag>
+                    <tag class="skills-tag">Research</tag>
+                    <tag class="skills-tag"></tag>
+                    <tag class="skills-tag">ghi</tag>
+                    </ul>
                 </div>
                 </div>
             </div>
@@ -170,7 +190,7 @@
                 </div>
             </div>
             <!--contact-->
-            <div id="contact">
+            <div id="contact" class="section">
                 <h1 class="section-title">Get in touch</h1>
                 <div class="panel-container">
                 <div class="unique-panel">
@@ -178,8 +198,7 @@
                     <form
                         id="contact-form"
                         method="POST"
-                        action="php/sendmail.php"
-                    >
+                        action="php/sendmail.php">
                         <div
                         class="form-row-form-error"
                         style="display: none"
