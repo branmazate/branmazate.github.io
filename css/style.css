@@ -272,6 +272,7 @@ body {
     padding:40px 32px;
     transition: all 0.2s ease;
     margin: 0;
+    display: block;
 }
 
 .section{
@@ -303,22 +304,50 @@ body {
 
 .about-description{
     grid-area: description;
+    transition: all ease 0.2s;
 }
 
 .skills{
     grid-area: skills;
+    margin: 32px 16px 16px 16px;
+    transition: all ease 0.2s;
+}
+
+.skills ul{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    margin: 0px;
+}
+
+.skills-tag{
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    background: #fdf8ed;
+    transition: all 0.2s ease;
+    margin: 10px 8px 10px 8px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.skills-tag:hover{
+    cursor: pointer;
+    background-color: #d1d1d1;
+    color: #fff;
 }
 
 #profile{
     grid-area: profile;
     height: auto;
+    transition: all ease 0.2s;
 }
-/*FIXME image doesn't shows*/
+/*FIXME image doesn't shows in desktop (it does in smaller screens but not completely rounded)*/
 
 #profile-pic{
     border-radius: 50%;
-    width: 30%;
-    height: auto;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     display: block;
     margin: 0 auto;
@@ -326,6 +355,7 @@ body {
 
 #about-container{
     display: grid;
+    grid-template-columns: 70% 30%;
     grid-template-rows: auto;
     grid-template-areas: 
     "description profile"
@@ -356,10 +386,20 @@ body {
         display: none;
     }
 
+    #content{
+        padding: 0;
+    }
+    
+    .skills{
+        flex-direction: column;
+        margin-top: 30px;
+    }
     #about-container{
         grid-template-areas: 
         "profile"
-        "description"
-        "skills";
+        "skills"
+        "description";
+        grid-template-rows:auto;
+        grid-template-columns: min-content;
     }
 }
