@@ -329,6 +329,7 @@ body {
     margin: 10px 8px 10px 8px;
     overflow: hidden;
     word-wrap: break-word;
+    z-index: 2;
 }
 
 .skills-tag:hover{
