@@ -276,7 +276,7 @@ body {
 /* Sections and content style*/
 
 #content{
-    padding:40px 32px;
+    padding:40px 40px;
     transition: all 0.2s ease;
     margin: 0;
     display: block;
