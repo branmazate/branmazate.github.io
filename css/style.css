@@ -470,7 +470,7 @@ textarea:focus {
 }
 
 
-submit{
+#submit{
     background-color: #529BDF;
     color: white;
     border: none;
@@ -482,11 +482,11 @@ submit{
     transition: background-color 0.3s ease-in-out;
 }
 
-submit:hover{
+#submit:hover{
     background-color: #3d82d3;
 }
 
-submit:focus{
+#submit:focus{
     background-color: #346dc1;
 }
 
@@ -571,6 +571,9 @@ submit:focus{
     background-color: #dfeffa;
     transition: all 0.2s ease-in-out;
 }
+
+/*Custom alert*/
+
 /*Locked properties*/
 
 .sidebar.locked ~ #content{
