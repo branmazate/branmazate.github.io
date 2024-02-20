@@ -2,8 +2,7 @@
 
 
 /*FIXME content components overlap in smaller screens*/
-/*FIXME Z-INDEX */
-
+/*FIXME hover effects doesn't works without using sidebar first*/
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -470,7 +469,8 @@ textarea:focus {
     color: #aaa;
 }
 
-button {
+
+submit{
     background-color: #529BDF;
     color: white;
     border: none;
@@ -482,11 +482,11 @@ button {
     transition: background-color 0.3s ease-in-out;
 }
 
-button:hover {
+submit:hover{
     background-color: #3d82d3;
 }
 
-button:focus{
+submit:focus{
     background-color: #346dc1;
 }
 
@@ -521,8 +521,10 @@ button:focus{
     -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.164);
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.164);
     padding: 0;
+    border: none;
 }
 
+/*FIXME hover transition of text and buttons ends different*/
 .copy-text{
     font-size: 12px;
     height: 100%;
@@ -537,6 +539,7 @@ button:focus{
     justify-content: center;
     margin-left: 4%;
     cursor: text;
+    transition: all 0.2s ease-in-out;
 }
 
 .svgIcon{
@@ -551,17 +554,23 @@ button:focus{
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background-color: #2998ce;
+    background-color: #97c1e2;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
+/*FIXME: Hover color is not what appears in web browser*/
 
 .mail-btn:hover .text{
-    background-color: rgb(0, 133, 133);
+    background-color: #dfeffa;
 }
 .mail-btn:hover .svgIcon{
-    background-color: rgb(0, 105, 105);
+    background-color: #60a1d0;
 }
 
+.mail-btn:hover{
+    background-color: #dfeffa;
+    transition: all 0.2s ease-in-out;
+}
 /*Locked properties*/
 
 .sidebar.locked ~ #content{
