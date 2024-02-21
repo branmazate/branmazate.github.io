@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
 
-/*TODO project-title style*/
 /*TODO description, portada and tags*/
 /*TODO aplication style */
 
@@ -26,6 +25,7 @@ body {
     min-height: 100vh;
     scroll-behavior: smooth;
     overflow-x: hidden;
+    text-rendering: optimizeLegibility;
 }
 .flex{
     display: flex;
@@ -259,169 +259,94 @@ body {
     fill: #f8f8f8;
     border-radius: 50px;
 }
-.sidebar.locked ~ #content{
+.sidebar.locked ~ main{
     order:2;
     margin-left: 270px;
 }
 
-/*
-h1 {
-    font-family: "Roboto",Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-top: 0px;
-    color: #fff;
-    margin-bottom: 24px;
-    display: block;
-    margin: 8px;
-}
-
-h2 {
-    font-weight: lighter;
-    line-height: 1,2;
-    margin-top: 20px;
-    color: #fff;
-    display: block;
-    margin: 8px;
-}
-
-p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    margin: 0 0 24px;
-    color: #fff;
-    margin: 8px;
-}
-
-ul {
-    display: block;
-    list-style-type: none;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    margin: 8px;
-}
-
-li {
-    display: list-item;
-    text-align: -webkit-match-parent;
-    padding: 12px 8px;
-}
-
-a {
-    text-decoration: none;
-    margin: 6px;
-}
-
-#content {
-    scroll-behavior: auto;
-}
-
-/* Social cards */
-.social{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height:max-content;
-    align-items: center;
-    justify-content: center;
-}
-
-.card{
-    height: 100%;
-    border-radius: 10px;
-    background-color: white;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    transition: .4s ease-in-out, .2s background-color ease-in-out, .2s background-image ease-in-out;
-    background: #dfe8e6;
-    backdrop-filter: blur(5px);
-    border: 1px solid #384d4b;
-    padding: 6px;
-    margin: 8px;
-}
-
-.card .twitter{
-    transition: .2s ease-in-out;
-    fill: #00acee;
-}
-.card .github{
-    transition: .2s ease-in-out;
-    fill: black;
-}
-
-.card .linkedin{
-    transition: .2s ease-in-out;
-    fill: #0a66c2;
-}
-
-.card:hover{
-    cursor: pointer;
-    scale: 1.2;
-    transform: rotate(90deg);
-}
-
-.card:nth-child(1):hover{
-    fill: white;
-    scale: 1.2;
-}
-
-.card:hover .twitter{
-    fill: white;
-    scale: 1.2;
-    transform: rotate(-90deg);
-}
-
-.card:nth-child(2):hover{
-    fill: white;
-    scale: 1.2;
-}
-
-.card:hover .github{
-    fill: white;
-    scale: 1.2;
-    transform: rotate(-90deg);
-}
-
-.card:nth-child(2):hover{
-    fill: white;
-    scale: 1.2;
-}
-
-.card:hover .linkedin{
-    fill: white;
-    scale: 1.2;
-    transform: rotate(-90deg);
-}
-
 /*content style*/
-#content{
-    padding:40px 40px;
+main{
+    border-radius: 16px;
     transition: all 0.2s ease;
-    margin: 0;
-    display: block;
+    margin: 20px auto 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+
 }
 .project-title{
-    font-size: 40px;
-    margin-bottom: 16px;
-    padding: 24px 16px;
+    font-size: 44px;
+    margin: 16px 20px;
+    padding: 24px 16px 24px 0px;
+    min-width: 50vw;
+    font-weight: 600;
 }
 #project-description{
-    font-size: 20px;
     color: #0e1a27;
-    line-height: 1.5;
+    max-width: 800px;
 }
 .panel{
-    background-color: #fff;
-    padding: 24px 24px;
-    border-radius: 16px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
-    width: max-content;
+    width: 100%;
+    margin-bottom: 16px;
+    transition: all 0.2s ease-in-out;
+}
+#project-description p{
+    margin: 16px 20px 16px 20px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: -0.004em;
+    text-size-adjust: 100%;
+    word-break: break-word;
+    line-height: 1.5;
+    color: #0e1a27;
+    margin-bottom: 16px;
+}
+#portada{
+    width: 100%;
+    min-height: 30vh;
+    margin: 0;
+    border: 1px solid black;
+}
+#tags{
+    margin-top: 12px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    padding: 4px 16px;
+
+}
+
+#tags ul{
+    width: 70%;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 12px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+#tags ul li{
+    font-size: 16px;
+    padding: 4px;
+    border-radius: 6px;
+    background-color: #FAEDDA;
+    cursor: pointer;
+}
+
+#tags ul li:hover{
+    background-color: #f4d9b4;
+    scale: 1.1;
+}
+
+#aplication{
+    width: 100%;
+    min-height: 500px;
+    border: 1px solid black;
 }
 /*
 .social_back{

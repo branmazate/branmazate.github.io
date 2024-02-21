@@ -281,11 +281,9 @@ body {
     margin: 0;
     display: block;
 }
-
 .section{
     height: 100vh;
 }
-
 .section-title{
     font-size: 40px;
     margin-top: 0px;
@@ -296,25 +294,21 @@ body {
     max-width: 50vw;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
 }
-
 .panel{
     background: #fff;
     padding: 24px 24px;
-    border-radius: 15px;
+    border-radius: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
     margin: 8px 16px;
 }
-
 #about-me p{
     margin-bottom: 8px;
     line-height: 1.5;
 }
-
 .about-description{
     grid-area: description;
     transition: all ease 0.2s;
 }
-
 .skills{
     grid-area: skills;
     margin: 32px 16px 16px 16px;
