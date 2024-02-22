@@ -2,7 +2,6 @@
 
 
 /*FIXME content components overlap in smaller screens*/
-/*FIXME hover effects doesn't works without using sidebar first*/
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -11,13 +10,11 @@
     padding: 0px;
     font-family: "Archivo",sans-serif;
 }
-
 html {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-text-size-adjust: 100%;
     scroll-behavior: smooth;
 }
-
 body {
     font-size: 16px;
     background-color: #f3f7fc;
