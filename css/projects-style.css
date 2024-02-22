@@ -2,7 +2,9 @@
 
 /*TODO description, portada and tags*/
 /*TODO aplication style */
+
 /*General styles*/
+
 *{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -70,7 +72,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: opacity 0.5s, visibility 0.5s;
 }
-
 /*Sidebar style*/
 
 .sidebar{
@@ -217,15 +218,19 @@ body {
 .sidebar.close .contact-icons{
     opacity: 0;
 }
+
 .contact-icons{
     margin-left: 16px;
     gap: 20%;
     align-items: center;
     justify-content: center;
 }
+
 #sidebar-open{
     display: block;
 }
+
+
 .navbar{
     width: 35px;
     height: 35px;
@@ -235,9 +240,11 @@ body {
     border-radius: 20px;
     opacity: 0;
 }
+
 #social-panel{
     display: block;
 }
+
 .social-icon{
     background-color: #f8f8f8;
     border-radius: 20px;
@@ -246,6 +253,7 @@ body {
     cursor: pointer;
     transition: all 0.2s ease;
 }
+
 .social-icon:hover{
     background-color: #525252;
     fill: #f8f8f8;
@@ -313,6 +321,7 @@ main{
     padding: 4px 16px;
 
 }
+
 #tags ul{
     width: 70%;
     display: flex;
@@ -328,10 +337,12 @@ main{
     background-color: #FAEDDA;
     cursor: pointer;
 }
+
 #tags ul li:hover{
     background-color: #f4d9b4;
     scale: 1.1;
 }
+
 #aplication{
     width: 100%;
     min-height: 500px;
