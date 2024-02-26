@@ -40,3 +40,23 @@ function copyText() {
     // Removing temporary input element
     document.body.removeChild(tempInput);
 }
+
+
+//Tags menu
+document.addEventListener('DOMContentLoaded', function() {
+    const trigger = document.querySelector('.tagslink');
+    const menu = document.getElementById('tags');
+
+    trigger.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevents the default anchor action
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block'; // Toggle visibility
+    });
+
+    //Hide menu when clicking elsewhere
+    document.addEventListener('click', function(e) {
+        if (!trigger.contains(e.target) && !menu.contains(e.target)) {
+            menu.style.display = 'none';
+        }
+    });
+
+});
