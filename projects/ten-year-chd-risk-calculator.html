@@ -23,7 +23,7 @@
     <meta name="robots" content="all, follow" />
     <meta name="googlebot" content="index,follow,snippet,archive" />
     <title>Project's name</title>
-    <link rel="stylesheet" href="projects-style.css" />
+    <link rel="stylesheet" href="../css/projects-style.css" />
     <link
     flex
     href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -159,7 +159,7 @@
     <div id="shade" class="not-blurred"></div>
     <main>
         <div id="container">
-        <h1 class="project-title">Project template</h1>
+        <h1 class="project-title">Ten Year CHD Risk Calculator</h1>
         <hr>
         <div id="top-line">
             <span><a href="https://github.com/Fermazate/Heart-Disease-Prediction" class="bx bxl-github gitlink"> GitHub Repository</a></span>
@@ -202,6 +202,41 @@
         </div>
         <div id="aplication" class="panel">
             <h2>Data Preparation and Exploratory Data Analysis</h2>
+            <h3>About the dataset</h3>
+            <p class="nt">
+                The dataset is publically available on the Kaggle website with the description: "The "Framingham" heart disease dataset includes over 4,240 records, 
+                16 columns and 15 attributes. The goal of the dataset is to predict whether the patient has 10-year risk of future (CHD) coronary heart disease"
+            </p>
+            <p class="nt">This dataset has several null values so the first step was to visualize the proportion of null values</p>
+            <p class="it">Null values of Framingham Dataset</p>
+            <div class="graph unique"><img class="graph" src="../img/null-values.png" alt="Null values of Framingham Dataset"></div>
+            <p class="fi">Null values volume of Framingham Dataset per variable. x-axis = dataset variables, y-axis = values</p>
+            <p class="nt">For simplicity, it was decided to drop the entries with null values from variables that exhibited 5% or fewer null values.
+                In the case of "glucose" variable, KNN imputation was chosen due to the larger volume of data; discarding them would not have been prudent
+            </p>
+            <p class="nt">As can be seen in the following graph, the distribution of the variables does not show significant changes after data cleaning and imputation. Additionally, it is observed that the continuous variables exhibit irregular and skewed distributions.</p>
+            <p class="it">Variable's distribution before and after being cleaned of null values</p>
+            <div class="unique"><img class="graph" src="../img/variables-distribution.png" alt="Variable's distribution of Framingham dataset before and after being cleaned"></div>
+            <p class="fi">Blue= before cleaning, Red=After cleaning.</p>
+            <p class="nt">Outliers were observed in several variables. In health sciences, there are situations where confining to a range is more beneficial, especially in the daily practice of healthcare professionals. Therefore, winsorization was employed to replace outliers with the extremes of the defined ranges at the 5th and 95th percentiles.</p>
+            <p class="nt">Let's analyse the variables, beginning with the target variable</p>
+            <p class="it">Distribution of target variable</p>
+            <div class="unique"><img src="../img/target-variable-distribution.png" alt="Distribution of TenYearCHD variable after cleaning the data in the Framingham dataset" class="graph"></div>
+            <p class="fi">0 = Ausence of the event. 1 = Presence of the event</p>
+            <p class="nt">The target variable is evidently skewed, a common occurrence when studying diseases. In a future step, we will use SMOTE analysis to address this issue.</p>
+            <p class="nt">The following graph illustrates the correlation between the variables.</p>
+            <p class="it">Correlation between variables</p>
+            <p class="unique"><img src="../img/features_correlations.png" alt="Features correlations in the Framingham dataset" class="graph"></p>
+            <p class="fi">Blue = negative correlation. Red = positive correlation</p>
+            <p class="nt">From the heatmap analysis, several insightful observations can be made regarding the correlations among variables in the dataset:</p>
+            <p class="nt pl">1. <b>Gender and Smoking Habits:</b> There is a slight correlation between being male and currently being a smoker, as well as with the number of cigarettes smoked per day. This suggests a gender-specific pattern in smoking habits within the dataset.</p>
+            <p class="nt pl">2. <b>Age and Smoking:</b> Age shows an inverse correlation with being a smoker, indicating that older individuals in the dataset are less likely to smoke. This raises an interesting point for further investigation, particularly whether older individuals are less likely to be women, given the observed correlation patterns.</p>
+            <p class="nt pl">3. <b>Age and CHD Risk Factors:</b> Age is correlated with several variables that are known in medicine to be risk factors for Coronary Heart Disease (CHD), including the TenYearCHD outcome itself. This highlights the importance of age as a predictor in CHD risk models.</p>
+            <p class="nt pl">4. <b>Education and Other Variables:</b> Education shows very little correlation with other features. It appears that older individuals in the dataset have lower education levels, reflecting a characteristic of the population from which the data was sourced.</p>
+            <p class="nt pl">5. <b>Smoking Variables:</b> The variables representing current smoker status and the number of cigarettes smoked per day (CigsPerDay) are highly correlated. Given that CigsPerDay being greater than zero inherently indicates a current smoker, it could be argued that the Current Smoker variable might be redundant for the prediction model, as CigsPerDay offers a more granular insight into smoking habits and its potential impact on TenYearCHD risk.</p>
+            <p class="nt pl">6. <b>Hypertension and Blood Pressure:</b> Prevalent hypertension shows a significant correlation with both diastolic and systolic blood pressure, which in turn are closely correlated with each other. This underscores the interrelated nature of these cardiovascular risk factors.</p>
+            <p class="nt pl">7. <b>Glucose and Diabetes:</b> A slight correlation between glucose levels and diabetes suggests that individuals with diabetes in the dataset might be under medical treatment, leading to controlled glucose levels. This assumption points towards the managed state of diabetes in the study population, potentially affecting their CHD risk profile.</p>
+            <p class="nt">These observations provide a foundational understanding of the relationships between various health factors and their collective impact on CHD risk, guiding the development of more nuanced and effective prediction models.</p>
         </div>
         </div>
     </main>
