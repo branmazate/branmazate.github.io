@@ -201,8 +201,8 @@
             <p>Let's get deep into it. Remember you can find jupyter notebooks and archives in my GitHub!</p>
         </div>
         <div id="aplication" class="panel">
-            <h2>Data Preparation and Exploratory Data Analysis</h2>
-            <h3>About the dataset</h3>
+            <h2>About the dataset.</h2>
+            <h3 class="subt">Exploratory Data Analysis</h3>
             <p class="nt">
                 The dataset is publically available on the Kaggle website with the description: "The "Framingham" heart disease dataset includes over 4,240 records, 
                 16 columns and 15 attributes. The goal of the dataset is to predict whether the patient has 10-year risk of future (CHD) coronary heart disease"
@@ -241,12 +241,45 @@
             <p class="it">Comparison of age of CHD onset between male and females</p>
             <div class="double"><img src="../img/violin-agextenyearchd.png" alt="" class="graph"><img src="../img/violin-agexgenderxtenyearchd.png" alt="" class="graph"></div>
             <p class="fi">First graphic. Comparison of patients' age with (1) or without(0) CHD in Ten Years. Second graphic: comparison of incidence and age between women and men</p>
-            <p class="nt"></p>
-            <p class="nt"></p>
-            <p class="nt"></p>
-            <p class="nt"></p>
-            <p class="nt"></p>
-            <p class="nt"></p>
+            <h2>Feature engineering</h2>
+            <p class="nt">Systolic and diastolic blood pressures are highly correlated. This is explained by their physiological connection, and in fact, there is a quantitative measurement that represents both readings: the mean arterial pressure.</p>
+            <p class="nt">Considering this correlation and the fact that in our data the distributions of both variables were identical, it was decided to use this calculation to simplify the features with which future machine learning models would be trained. This approach aims to streamline the input variables, potentially enhancing model performance by focusing on a single, comprehensive measure of blood pressure rather than two highly correlated but separate measurements.</p>
+            <div class="unique"><p class="formula">MAP = DP +1/3(SP-DP)</p></div>
+            <p class="nt">Handling imbalanced data is a critical step in preparing a dataset for machine learning models, especially in fields like healthcare, where the outcome variable can be heavily skewed towards one class.</p>
+            <p class="nt">In this case, the decision was made to perform oversampling on the minority class using the Synthetic Minority Over-sampling Technique (SMOTE). This method synthetically generates new instances of the minority class by interpolating between existing instances. SMOTE helps to balance the dataset by increasing the size of the minority class, thus providing a more balanced distribution of classes for training machine learning models. This approach is particularly useful in preventing model bias toward the majority class and improving the performance of the model on the minority class, which is crucial for applications like disease prediction where the minority class (e.g., patients with a disease) is of significant interest.</p>
+            <p class="nt">To compare their results, various machine learning algorithms were tested. The algorithms used included Gradient Boosting Classifier, Random Forest Classifier, Logistic Regression, Support Vector Machine (SVM) Classifier, and K-Nearest Neighbors (KNN). This diverse set of algorithms was chosen to cover a broad spectrum of machine learning approaches, from ensemble methods like Gradient Boosting and Random Forest, which build models on top of multiple weak learners to improve prediction accuracy, to simpler, more interpretable models like Logistic Regression, which is often used as a baseline for binary classification tasks.</p>
+            <div class="multiplesix">
+                <div class="cell">
+                    <p class="it">Gradient Boosting Classifier</p>
+                    <img src="../img/GBC-performance.jpg" alt="" class="graph">
+                </div>
+                <div class="cell">
+                    <p class="it">Random Forest Classifier</p>
+                    <img src="../img/RFC-performance.jpg" alt="" class="graph">
+                </div>
+                <div class="cell">
+                    <p class="it">Logistic Regression</p>
+                    <img src="../img/LR-performance.jpg" alt="" class="graph">
+                </div>
+                <div class="cell">
+                    <p class="it">Support Vector Machine Classifier</p>
+                    <img src="../img/SVM-performance.png" alt="" class="graph">
+                </div>
+                <div class="cell">
+                    <p class="it">K K-Nearest Neighbors</p>
+                    <img src="../img/KNN-performance.png" alt="" class="graph">
+                </div>
+            </div>
+            <p class="nt">In this project, the Support Vector Machine (SVM) classifier emerged as the best option, followed by Logistic Regression. This preference is attributed to achieving a higher recall. Despite a lower precision, recall is critically important in healthcare settings because the cost of failing to diagnose a sick patient (a false negative) is often considered more severe than mistakenly identifying a healthy patient as at risk (a false positive). However, precision cannot be overlooked, as low precision leads to unnecessary expenses for additional studies and treatments.</p>
+            <p class="nt">The prioritization of recall over precision in healthcare contexts reflects the emphasis on patient safety and the principle of "do no harm." Early detection of conditions, even at the expense of additional follow-up tests for some false positives, is generally preferred to missing a diagnosis that could lead to more serious health consequences.</p>
+            <h2>Conclusion</h2>
+            <p class="nt">In this project, through the application of various machine learning algorithms to predict the Ten Year Risk of Coronary Heart Disease (CHD), the Support Vector Machine (SVM) classifier was identified as the most suitable model, closely followed by Logistic Regression. The selection criteria were primarily based on the models' ability to achieve high recall rates, a critical factor in healthcare applications where the early and accurate identification of disease risk can significantly impact patient outcomes. Despite SVM's lower precision, which could potentially lead to higher follow-up costs due to false positives, its superior recall rate is deemed more valuable because it minimizes the risk of overlooking patients who might be at risk of CHD.</p>
+            <h2>Use cases</h2>
+            <p class="nt">1. Clinical Decision Support: The models developed in this project can be integrated into clinical decision support systems to assist healthcare providers in identifying patients at high risk of CHD. By leveraging patient data, these tools can offer personalized risk assessments, enabling earlier interventions and tailored treatment plans.</p>
+            <p class="nt">2. Public Health Screening Programs: Public health initiatives can utilize the predictive model to screen populations for CHD risk, particularly focusing on high-risk groups. This can facilitate targeted health education, lifestyle interventions, and monitoring strategies to prevent the onset of CHD.</p>
+            <p class="nt">3. Personal Health Applications: The algorithm can be adapted for use in personal health apps, allowing individuals to assess their risk of CHD based on their health data. This can empower people to take proactive steps towards managing their health, such as improving diet, increasing physical activity, and seeking medical advice when necessary.</p>
+            <p class="nt">4. Insurance Risk Assessment: Insurance companies can use the model to better understand the CHD risk profile of their clientele, aiding in the development of tailored insurance products and pricing strategies that reflect individual risk levels.</p>
+            <p class="nt">5. Research and Development: In the pharmaceutical and healthcare technology sectors, the insights gained from this project can inform the development of new treatments and interventions for CHD. By identifying key risk factors and their impact on CHD risk, researchers can focus their efforts on areas with the highest potential for improving patient outcomes.</p>
         </div>
         </div>
     </main>
