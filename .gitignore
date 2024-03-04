@@ -1,4 +1,4 @@
 snippets.txt
 
 .vscode
-*.DS_Store
+**/.DS_Store
