@@ -276,9 +276,25 @@ main{
     margin: 0px auto 16px auto;
     transition: all 0.2s ease-in-out;
 }
+/* about-me */
+#about-me{
+    display: block;
+    min-width: 60%;
+}
 #about-me p{
+    font-size: 16px;
     margin-bottom: 8px;
     line-height: 1.5;
+}
+#about-container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "description profile"
+    "description skills"
+    "description skills"
+    "description skills";
 }
 .about-description{
     grid-area: description;
@@ -287,20 +303,25 @@ main{
 .skills{
     grid-area: skills;
     transition: all ease 0.2s;
+    border-radius: 4px;
+    border: solid 1px #c2c2c2;
+    padding: 8px;
 }
-
 .skills ul{
     display: flex;
     flex-direction: row-reverse;
     flex-wrap: wrap;
     margin: 0px;
 }
-
+.skills p{
+    position:absolute;
+    color: #adadad;
+    padding: 4px;
+}
 .skills-tag{
-    border-radius: 12px;
+    border-radius: 4px;
+    border: solid 1px #e0e0e0;
     padding: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
-    background: #fdf8ed;
     transition: all 0.2s ease;
     margin: 10px 8px 10px 8px;
     overflow: hidden;
@@ -327,17 +348,6 @@ main{
     object-fit: cover;
     display: block;
     margin: 0 auto;
-}
-
-#about-container{
-    display: grid;
-    grid-template-columns: 70% 30%;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "description profile"
-    "description skills"
-    "description skills"
-    "description .";
 }
 
 /*Portfolio styling*/
