@@ -6,9 +6,11 @@
 }
 :root{
     --background: white;
+    --primaryColor: #907f74;
     --lightbackground: #E4E6E5;
     --textcolor: black;
     --highlight: #c4c4c4;
+    --light: #D9D9D9
 }
 body{
     background-color: var(--background);
@@ -104,7 +106,37 @@ nav a{
     width: 50vw;
     min-height: 82vh;
 }
-
+#heroTitle{
+    font-size: 48px;
+    text-align: center;
+    font-weight: 600;
+    margin: 0px 8px;
+}
+#heroSubtitle{
+    font-size: 24px;
+    text-align: center;
+    font-weight: 400;
+    color: var(--light);
+    margin: 4px 0px;
+}
+.principalBtn{
+    cursor: pointer;
+    color: var(--background);
+    letter-spacing: 4%;
+    font-size: 12px;
+    background-color: var(--primaryColor);
+    align-items: center;
+    border: none;
+    border-radius:24px;
+    transition: all 0.2s;
+}
+.principalBtn:hover{
+    background-color: var(--highlight);
+    color: var(--textcolor);
+}
+.principalBtn:active{
+    background-color: var(--light);
+}
 /*Footer style*/
 #footer{
     bottom: 0;
