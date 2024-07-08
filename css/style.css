@@ -79,13 +79,16 @@ nav a{
     padding: 0 4px;
 }
 /*Navigation bar hover effect*/
+/*TODO: Fix Hover effect size (It looks irregular)*/
 .head-link:hover{
     background-color:var(--highlight) ;
 }
 /*Content style*/
 #content{
     margin-top: 6vh;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    min-width: 100vw;
 }
 #heroIntroduction{
     width: 50vw;
