@@ -191,6 +191,10 @@ nav a{
     color: white;
     border-radius: 12px;
 }
+#pic{
+    width: 200px;
+    height: 200px;
+}
 .skillTitle{
     font-size: 18px;
     font-weight: 600;
