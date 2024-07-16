@@ -151,10 +151,51 @@ nav a{
     border: black 10 px;
     filter: blur(50px);
 }
+/*About me section*/
+#aboutMe{
+    margin: 8px 40px;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "profilePic aboutMe"
+    "skills aboutMe";
+}
+#profilePic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: profilePic;
+    border: 1px solid black;
+}
+#skillsPanel{
+    grid-area: skills;
+    border: 1px solid black;
+}
+#aboutMeText{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 16px;
+    grid-area: aboutMe;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+}
+#aboutMeText h2{
+    font-size: 48px;
+    justify-self: center;
+}
+#aboutMeText p{
+    font-size: 20px;
+}
+/*Projects section style*/
+#projects{
+    min-height: 100vh;
+}
 /*Footer style*/
 #footer{
-    position: -webkit-sticky;
-    position: sticky;
     bottom: 0;
     width: 100%;
     height: 12vh;
